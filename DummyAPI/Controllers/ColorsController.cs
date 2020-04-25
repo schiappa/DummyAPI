@@ -17,5 +17,11 @@ namespace DummyAPI.Controllers
         {
             return Ok("https://www.youtube.com/watch?v=nWAGLkyxQG0");
         }
+        [Route("GetWorstColorCombinationAsASong")]
+        [HttpGet]
+        public ActionResult GetWorstColorCombinationAsASong()
+        {
+            return Ok("https://www.youtube.com/watch?v=3t2LF5DWFVk");
+        }
     }
 }
