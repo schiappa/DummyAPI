@@ -14,12 +14,12 @@ namespace DummyAPI.Controllers
         [HttpPost]
         public ActionResult Login([FromBody] LoginDTO login)
         {
-            if (login == null || string.IsNullOrWhiteSpace(login.Username) || string.IsNullOrWhiteSpace(login.Password))
+            if (login == null || string.IsNullOrWhiteSpace(login.Username) || string.IsNullOrWhiteSpace(login.HashedPassword))
                 return BadRequest("Se debe indicar el email y contraseña");
             try
             {
                 
-                UserDTO user = SessionRepository.GetUserWithCredentials(login.Username, login.Password);
+                UserDTO user = SessionRepository.GetUserWithCredentials(login.Username, login.HashedPassword);
                 if (user == null)
                     return BadRequest("Usuario o contraseña incorrectos.");
 
