@@ -164,5 +164,13 @@ namespace DummyAPI.Controllers
                 return Ok(result);
             return BadRequest("Usuario no encontrado");
         }
+
+        [Route("Diff")]
+        [HttpGet]
+        public ActionResult Diff()
+        {
+            var diff = UsersRepository.Diff();
+            return Ok(diff);
+        }
     }
 }
