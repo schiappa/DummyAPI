@@ -23,5 +23,12 @@ namespace DummyAPI.Controllers
         {
             return Ok("https://www.youtube.com/watch?v=3t2LF5DWFVk");
         }
+
+        [Route("GetWorstColorCombination")]
+        [HttpGet]
+        public ActionResult GetWorstColorCombination()
+        {
+            return Ok("Red, blue and white!");
+        }
     }
 }
