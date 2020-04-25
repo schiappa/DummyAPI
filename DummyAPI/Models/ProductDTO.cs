@@ -7,7 +7,7 @@ namespace DummyAPI.Models
 {
     public class ProductDTO
     {
-        public string Name { get; set; }
+        public string ProductName { get; set; }
         public float Price { get; set; }
     }
 }
